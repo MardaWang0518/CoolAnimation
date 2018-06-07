@@ -28,8 +28,8 @@ import java.util.List;
 public class AnimationView extends View {
     private static final String TAG = "AnimationView";
     //起点在x、y移动范围
-    private float p1XLength = 400, p1YLength = 20, speedP1 = 0.15f;
-    private float p2XLength = 20, p2YLength = 400, speedP2 = 0.05f;
+    private float p1XLength = 350, p1YLength = 100, speedP1 = 0.15f;
+    private float p2XLength = 100, p2YLength = 350, speedP2 = 0.05f;
     private double angleP1 = 0, angleP2 = 0;
     private int viewWidth, viewHeight;
     private Paint paint;
@@ -58,10 +58,6 @@ public class AnimationView extends View {
 
     private void init() {
         setBackgroundColor(Color.BLACK);
-        valueAnimator = ValueAnimator.ofFloat(0f, 1f);
-        valueAnimator.setDuration(animDuration);
-        valueAnimator.addUpdateListener(animatorUpdateListener);
-        valueAnimator.addListener(animatorListenerAdapter);
 
         paint = new Paint();
         paint.setAntiAlias(true);
@@ -114,7 +110,7 @@ public class AnimationView extends View {
      */
     public void startDraw(int pos) {
         corrDatas.clear();
-        setPaintColor(pos);
+        setPaint(pos);
         valueAnimator.start();
     }
 
@@ -158,7 +154,7 @@ public class AnimationView extends View {
         this.speedP2 = speedP2;
     }
 
-    private void setPaintColor(int pos){
+    private void setPaint(int pos){
         if(paint!=null){
             switch (pos){
                 case 0:
@@ -177,6 +173,10 @@ public class AnimationView extends View {
                     paint.setColor(Color.WHITE);
 
             }
+            valueAnimator = ValueAnimator.ofFloat(0f, 1f);
+            valueAnimator.setDuration(animDuration);
+            valueAnimator.addUpdateListener(animatorUpdateListener);
+            valueAnimator.addListener(animatorListenerAdapter);
         }
     }
 

@@ -39,16 +39,17 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<float[]> drawMenu;
 
     private boolean firstIn = true;
-    private float[] data1 = {400, 400, 200, 200, 0.05f, 0.35f};
-    private float[] data2 = {200, 500, 500, 200, 0.4f, 0.4f};
-    private float[] data3 = {450, 450, 450, 450, 0.35f, 0.05f};
-    private float[] data4 = {450, 150, 150, 450, 0.1f, 0.05f};
-    private float[] data5 = {450, 450, 450, 450, 0.5f, 0.15f};
-    private float[] data6 = {90, 90, 450, 450, 0.5f, 0.15f};
-    private float[] data7 = {200, 200, 450, 450, 0.55f, 0.15f};
-    private float[] data8 = {450, 150, 150, 450, 0.15f, 0.05f};
-    private float[] data9 = {450, 450, 150, 150, 1f, 0.15f};
+    private float[] data1 = {350, 350, 200, 200, 0.05f, 0.35f};
+    private float[] data2 = {200, 400, 400, 200, 0.4f, 0.4f};
+    private float[] data3 = {350, 350, 350, 350, 0.35f, 0.05f};
+    private float[] data4 = {400, 200, 200, 400, 0.1f, 0.05f};
+    private float[] data5 = {350, 350, 350, 350, 0.5f, 0.15f};
+    private float[] data6 = {90, 90, 350, 350, 0.5f, 0.15f};
+    private float[] data7 = {200, 200, 400, 400, 0.55f, 0.15f};
+    private float[] data8 = {450, 250, 250, 450, 0.15f, 0.05f};
+    private float[] data9 = {350, 350, 150, 150, 1f, 0.15f};
     private int mColor_pos = 0;
+    private float[] mSelect_type = data1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +57,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         initData();
         initView();
+        inflateData(mSelect_type);
+        mAnimate_view.startDraw(mColor_pos);
     }
 
     private void initView() {
@@ -158,7 +161,7 @@ public class MainActivity extends AppCompatActivity {
                 if (firstIn) {
                     firstIn = false;
                 } else {
-                    inflateData(null);
+                    inflateData(mSelect_type);
                     mColor_pos = position;
                     mAnimate_view.startDraw(mColor_pos);
                 }
@@ -182,7 +185,8 @@ public class MainActivity extends AppCompatActivity {
                 if (firstIn) {
                     firstIn = false;
                 } else {
-                    inflateData(drawMenu.get(position));
+                    mSelect_type = drawMenu.get(position);
+                    inflateData(mSelect_type);
                     mAnimate_view.startDraw(mColor_pos);
                 }
             }
@@ -196,7 +200,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void inflateData(float[] datas) {
         if (datas == null) {
-            datas = data1;
+            datas = mSelect_type;
         }
         mEt_p1x.setText(datas[0] + "");
         mEt_p1y.setText(datas[1] + "");
