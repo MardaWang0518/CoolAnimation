@@ -1,18 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_f4f4f4"
     tools:context="com.mardawang.android.coolanimation.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:padding="10dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
 
-</android.support.constraint.ConstraintLayout>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="p1坐标："
+            android:layout_weight="1"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/et_p1x"
+            android:textSize="14sp"
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:hint="X坐标"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:background="@color/white"/>
+
+        <EditText
+            android:id="@+id/et_p1y"
+            android:textSize="14sp"
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:hint="Y坐标"
+            android:gravity="center"
+            android:layout_marginLeft="3dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"/>
+
+        <EditText
+            android:id="@+id/et_p1_speed"
+            android:textSize="14sp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:hint="p1_speed"
+            android:gravity="center"
+            android:layout_marginLeft="3dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="p2坐标："
+            android:layout_weight="1"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/et_p2x"
+            android:textSize="14sp"
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:hint="X坐标"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:background="@color/white"/>
+
+        <EditText
+            android:id="@+id/et_p2y"
+            android:textSize="14sp"
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:hint="Y坐标"
+            android:gravity="center"
+            android:layout_marginLeft="3dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"/>
+
+        <EditText
+            android:id="@+id/et_p2_speed"
+            android:textSize="14sp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:hint="p2_speed"
+            android:gravity="center"
+            android:layout_marginLeft="3dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
+        <Spinner
+            android:id="@+id/spinner_color"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            />
+        <Spinner
+            android:id="@+id/spinner_type"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_godraw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="开始绘制"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:background="@color/bg_blue"/>
+
+    <com.mardawang.android.coolanimation.AnimationView
+        android:id="@+id/animate_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    </com.mardawang.android.coolanimation.AnimationView>
+
+</LinearLayout>
