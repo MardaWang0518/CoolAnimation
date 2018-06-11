@@ -3,12 +3,12 @@
 
 先上效果图：
 
-        ![一号图](images/一号图.png)
-        ![三号图](images/三号图.png)
-        ![四号图](images/四号图.png)
-        ![六号图](images/六号图.png)
-        ![七号图](images/七号图.png)
-        ![九号图](images/九号图.png)
+![一号图](images/一号图.png)
+![三号图](images/三号图.png)
+![四号图](images/四号图.png)
+![六号图](images/六号图.png)
+![七号图](images/七号图.png)
+![九号图](images/九号图.png)
 
 关于原理
 
@@ -30,8 +30,8 @@
     由于在Openframeworks上有一个简单的命令，仅仅通过 ofMesh 的 addColor() 和 addVertex(),可以很方便
     地在两点连线间产生自然的色彩过渡。所以下面的图形的生成都使用了OF，关键节点的颜色色相会随时间变化。
 
-        ![001](images/001.png)
-        ![002](images/002.png)  ![003](images/003.png)
+![001](images/001.png)
+![002](images/002.png)  ![003](images/003.png)
 
 
     If you like this library's design, feel it help to you, you can point the upper right corner "Star" support Thank you! ^ _ ^
