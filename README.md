@@ -22,3 +22,9 @@
         B的Y轴运动半径
 
     我们把这几个参数设置不同的值，根据运动规律，它们便会画出不同的图案，效果你想都想不到哦！
+
+
+    
+
+    If you like this library's design, feel it help to you, you can point the upper right corner "Star" support Thank you! ^ _ ^
+
