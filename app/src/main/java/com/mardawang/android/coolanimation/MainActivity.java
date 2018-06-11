@@ -48,6 +48,8 @@ public class MainActivity extends AppCompatActivity {
     private float[] data7 = {200, 200, 350, 350, 0.55f, 0.15f};
     private float[] data8 = {350, 200, 200, 350, 0.15f, 0.05f};
     private float[] data9 = {350, 350, 150, 150, 1f, 0.15f};
+//    private float[] data10 = {200, 200, 300, 300, 0.56f, 0.03f};
+//    private float[] data11 = {300, 120, 120, 220, 0.12f, 0.25f};
     private int mColor_pos = 0;
     private float[] mSelect_type = data1;
 
@@ -112,7 +114,9 @@ public class MainActivity extends AppCompatActivity {
         spinnerMenu.add("六号图案");
         spinnerMenu.add("七号图案");
         spinnerMenu.add("八号图案");
-        spinnerMenu.add("九号图案");
+//        spinnerMenu.add("九号图案");
+//        spinnerMenu.add("十号图案");
+        spinnerMenu.add("终极图案");
 
         spinnerColor = new ArrayList<>();
         spinnerColor.add("白色");
@@ -132,6 +136,8 @@ public class MainActivity extends AppCompatActivity {
         drawMenu.add(data7);
         drawMenu.add(data8);
         drawMenu.add(data9);
+//        drawMenu.add(data10);
+//        drawMenu.add(data11);
     }
 
     private AnimationView.DrawingListener drawingListener = new AnimationView.DrawingListener() {
