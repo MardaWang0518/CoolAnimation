@@ -45,8 +45,8 @@ public class MainActivity extends AppCompatActivity {
     private float[] data4 = {400, 200, 200, 400, 0.1f, 0.05f};
     private float[] data5 = {350, 350, 350, 350, 0.5f, 0.15f};
     private float[] data6 = {90, 90, 350, 350, 0.5f, 0.15f};
-    private float[] data7 = {200, 200, 400, 400, 0.55f, 0.15f};
-    private float[] data8 = {450, 250, 250, 450, 0.15f, 0.05f};
+    private float[] data7 = {200, 200, 350, 350, 0.55f, 0.15f};
+    private float[] data8 = {350, 200, 200, 350, 0.15f, 0.05f};
     private float[] data9 = {350, 350, 150, 150, 1f, 0.15f};
     private int mColor_pos = 0;
     private float[] mSelect_type = data1;
@@ -154,7 +154,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
             Log.d("MainActivity", "onItemSelected");
-            if (parent.getId() == R.id.spinner_type) {
+            if (parent.getId() == R.id.spinner_color) {
                 if (position < 0 || position >= spinnerColor.size())
                     return;
 

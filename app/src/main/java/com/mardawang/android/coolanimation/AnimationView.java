@@ -159,20 +159,28 @@ public class AnimationView extends View {
             switch (pos){
                 case 0:
                     paint.setColor(Color.WHITE);
+                    break;
                 case 1:
                     paint.setColor(getResources().getColor(R.color.purple));
+                    break;
                 case 2:
                     paint.setColor(Color.BLUE);
+                    break;
                 case 3:
                     paint.setColor(Color.GREEN);
+                    break;
                 case 4:
                     paint.setColor(getResources().getColor(R.color.orange));
+                    break;
                 case 5:
                     paint.setColor(Color.RED);
+                    break;
                 default:
                     paint.setColor(Color.WHITE);
+                    break;
 
             }
+
             valueAnimator = ValueAnimator.ofFloat(0f, 1f);
             valueAnimator.setDuration(animDuration);
             valueAnimator.addUpdateListener(animatorUpdateListener);
