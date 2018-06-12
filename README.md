@@ -31,8 +31,12 @@
     地在两点连线间产生自然的色彩过渡。所以下面的图形的生成都使用了OF，关键节点的颜色色相会随时间变化。
 
 ![001](images/001.png)
-![002](images/002.png)  ![003](images/003.png)
+![002](images/002.png)
+![003](images/003.png)
 
+
+
+    如果对你有那么一丝的帮助，请不要吝啬。求star！求star！求star！求star！求star
 
     If you like this library's design, feel it help to you, you can point the upper right corner "Star" support Thank you! ^ _ ^
 
