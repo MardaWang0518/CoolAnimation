@@ -155,9 +155,9 @@ public class AnimationView extends View {
         this.speedP2 = speedP2;
     }
 
-    private void setPaint(int pos){
-        if(paint!=null){
-            switch (pos){
+    private void setPaint(int pos) {
+        if (paint != null) {
+            switch (pos) {
                 case 0:
                     paint.setColor(Color.WHITE);
                     break;
@@ -200,6 +200,7 @@ public class AnimationView extends View {
 
     public interface DrawingListener {
         void drawStart();
+
         void drawOver();
     }
 }

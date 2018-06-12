@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
     private float[] data7 = {200, 200, 350, 350, 0.55f, 0.15f};
     private float[] data8 = {350, 200, 200, 350, 0.15f, 0.05f};
     private float[] data9 = {350, 350, 150, 150, 1f, 0.15f};
-//    private float[] data10 = {200, 200, 300, 300, 0.56f, 0.03f};
+    //    private float[] data10 = {200, 200, 300, 300, 0.56f, 0.03f};
 //    private float[] data11 = {300, 120, 120, 220, 0.12f, 0.25f};
     private int mColor_pos = 0;
     private float[] mSelect_type = data1;
@@ -159,7 +159,6 @@ public class MainActivity extends AppCompatActivity {
     private AdapterView.OnItemSelectedListener selectedListener_color = new AdapterView.OnItemSelectedListener() {
         @Override
         public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-            Log.d("MainActivity", "onItemSelected");
             if (parent.getId() == R.id.spinner_color) {
                 if (position < 0 || position >= spinnerColor.size())
                     return;
@@ -183,7 +182,6 @@ public class MainActivity extends AppCompatActivity {
     private AdapterView.OnItemSelectedListener selectedListener_type = new AdapterView.OnItemSelectedListener() {
         @Override
         public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-            Log.d("MainActivity", "onItemSelected");
             if (parent.getId() == R.id.spinner_type) {
                 if (position < 0 || position >= drawMenu.size())
                     return;
