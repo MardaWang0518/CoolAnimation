@@ -60,13 +60,14 @@ public class AnimationView extends View {
         setBackgroundColor(Color.BLACK);
 
         paint = new Paint();
-        paint.setAntiAlias(true);
         paint.setStrokeWidth(2);
+        paint.setAntiAlias(true);
         paint.setStyle(Paint.Style.FILL);
 
-//            Shader shader = new LinearGradient(cd.p1X, cd.p1Y, cd.p2X, cd.p2Y, colors, null, Shader.TileMode.MIRROR);
-//            paint.setShader(shader);
-
+        valueAnimator = ValueAnimator.ofFloat(0f, 1f);
+        valueAnimator.setDuration(animDuration);
+        valueAnimator.addUpdateListener(animatorUpdateListener);
+        valueAnimator.addListener(animatorListenerAdapter);
         corrDatas = new ArrayList<>();
     }
 
@@ -180,11 +181,6 @@ public class AnimationView extends View {
                     break;
 
             }
-
-            valueAnimator = ValueAnimator.ofFloat(0f, 1f);
-            valueAnimator.setDuration(animDuration);
-            valueAnimator.addUpdateListener(animatorUpdateListener);
-            valueAnimator.addListener(animatorListenerAdapter);
         }
     }
 
