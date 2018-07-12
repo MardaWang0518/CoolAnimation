@@ -22,7 +22,7 @@ import java.util.List;
  * <p>
  * desc: 简单的规律绘制直线构造神奇的视觉效果
  * <p>
- * 启发、原理:http://mp.weixin.qq.com/s/FieNhelCar1cZjhBS28ymQ
+ * 原理:http://mp.weixin.qq.com/s/FieNhelCar1cZjhBS28ymQ
  * <p>
  */
 public class AnimationView extends View {
