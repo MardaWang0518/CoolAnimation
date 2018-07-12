@@ -53,6 +53,8 @@ public class MainActivity extends AppCompatActivity {
     private int mColor_pos = 0;
     private float[] mSelect_type = data1;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initView() {
+
         mEt_p1x = findViewById(R.id.et_p1x);
         mEt_p1y = findViewById(R.id.et_p1y);
         mEt_p1_speed = findViewById(R.id.et_p1_speed);

@@ -6,8 +6,8 @@ android {
         applicationId "com.mardawang.android.coolanimation"
         minSdkVersion 15
         targetSdkVersion 26
-        versionCode 1
-        versionName "1.0"
+        versionCode 7
+        versionName "1.5"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -16,6 +16,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+//    dataBinding {
+//        enabled =true
+//    }
 }
 
 dependencies {
