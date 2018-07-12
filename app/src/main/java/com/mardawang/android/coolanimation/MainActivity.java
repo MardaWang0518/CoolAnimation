@@ -54,7 +54,6 @@ public class MainActivity extends AppCompatActivity {
     private float[] mSelect_type = data1;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -159,7 +158,8 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
-    private AdapterView.OnItemSelectedListener selectedListener_color = new AdapterView.OnItemSelectedListener() {
+    private AdapterView.OnItemSelectedListener selectedListener_color = new AdapterView
+            .OnItemSelectedListener() {
         @Override
         public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
             if (parent.getId() == R.id.spinner_color) {
@@ -182,7 +182,8 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
-    private AdapterView.OnItemSelectedListener selectedListener_type = new AdapterView.OnItemSelectedListener() {
+    private AdapterView.OnItemSelectedListener selectedListener_type = new AdapterView
+            .OnItemSelectedListener() {
         @Override
         public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
             if (parent.getId() == R.id.spinner_type) {

@@ -81,7 +81,8 @@ public class AnimationView extends View {
         }
     }
 
-    private ValueAnimator.AnimatorUpdateListener animatorUpdateListener = new ValueAnimator.AnimatorUpdateListener() {
+    private ValueAnimator.AnimatorUpdateListener animatorUpdateListener = new ValueAnimator
+            .AnimatorUpdateListener() {
         @Override
         public void onAnimationUpdate(ValueAnimator animation) {
             calculate();
@@ -146,7 +147,8 @@ public class AnimationView extends View {
     /**
      * 设置参数
      */
-    public void setParam(float p1XLength, float p1YLength, float p2XLength, float p2YLength, float speedP1, float speedP2) {
+    public void setParam(float p1XLength, float p1YLength, float p2XLength, float p2YLength,
+                         float speedP1, float speedP2) {
         this.p1XLength = p1XLength;
         this.p1YLength = p1YLength;
         this.p2XLength = p2XLength;
